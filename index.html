@@ -1,6 +1,17 @@
 <html>
     <head>
         <title> foobar </title>
+        <script type="text/javascript" src="https://momentjs.com/downloads/moment-timezone.js" />
+        <script>
+            window.setInterval(function() {
+              document.title = getTime();
+            }, 1000);
+            
+            function getTime() {
+                let time = moment().tz("Asia/Tokyo").format('ddd HH:mm:ss');
+                return time
+            }
+        </script>
     </head>
     <body>
         hello world!
